@@ -4,41 +4,79 @@
   <meta charset="UTF-8">
   <title>Mi Portafolio - Luis Navarro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="img/perfil.jpg" alt="Foto de perfil" style="width:120px; border-radius: 50%;">
-    <h1>Luis Bartolomé Navarro Tierno</h1>
-    <p>Desarrollador | Analista de Datos | Apasionado por la tecnología</p>
+  <nav class="navbar navbar-expand-lg bg-dark + navbar-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">Luis Navarro</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container text-center my-5 py-4 bg-dark border rounded shadow-sm">
+<img src="img/perfil.jpg" alt="Foto de perfil" class="img-fluid rounded-circle" style="width:160px; height:160px; object-fit: cover; border-radius: 10%;">    <h1 class="text-white">Luis Bartolomé Navarro Tierno</h1>
+    <p class="text-white">Desarrollador | Analista de Datos | Apasionado por la tecnología</p>
   </header>
 
-  <section>
-    <h2>Sobre mí</h2>
+  <section id="sobre-mi" class="container my-5 py-4 bg-light rounded">
+    <h2 class="text-primary fw-bold border-bottom pb-2 mb-3">Sobre mí</h2>
     <p>Soy un profesional con formación técnica y experiencia internacional, especializado en análisis de datos y desarrollo web. Me apasiona encontrar soluciones prácticas a problemas complejos y transformar ideas en herramientas eficientes, tanto en entornos operativos como civiles.</p>
   </section>
 
-  <section>
-    <h2>Proyectos destacados</h2>
-
-    <div class="proyecto">
-      <img src="img/proyecto1.png" alt="Proyecto 1" style="max-width: 100%;">
-      <h3><a href="https://github.com/tuusuario/proyecto1">Nombre del Proyecto 1</a></h3>
-      <p>Breve descripción del proyecto.</p>
+  <section id="proyectos" class="container my-5 py-4 bg-white border rounded shadow-sm">
+    <div class="mb-5">
+      <h2 class="text-center fw-bold text-primary display-6 border-bottom pb-3">Proyectos destacados</h2>
     </div>
 
+    <div class="proyecto-resumen row mb-5 align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="img/logoCurso.jpg" alt="Curso Derecho Presupuestario" class="img-fluid rounded" style="max-width: 100%;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="text-primary fw-bold text-decoration-none">Web promocional de curso online</h3>
+        <p>
+          Página web informativa desarrollada como iniciativa personal, aplicada a un caso real para dar visibilidad a un curso online dirigido a empleados públicos. La web ha contribuido al aumento de inscripciones y ha facilitado la incorporación de nuevos productos formativos.
+        </p>
+        <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, GitHub Pages, Hostinger</p>
+        <a href="proyectos/webCursoDerechoPresupuestario.html" class="btn btn-primary">Ver más detalles</a>
+      </div>
+    </div>
+    <div class="proyecto-resumen row mb-5 align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="proyectos/img/Gastos.png" alt="Dashboard de economía personal" class="img-fluid rounded" style="max-width: 100%;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="text-primary fw-bold text-decoration-none">Gestión Económica del Hogar</h3>
+        <p>
+          Proyecto personal orientado a mejorar la toma de decisiones sobre gastos e ingresos mediante la automatización del control financiero. Utiliza KNIME Desktop como herramienta principal para extraer, transformar y analizar datos bancarios, generando informes mensuales claros y visuales.
+        </p>
+        <p>
+          El sistema permite anticipar gastos, evitar solapamientos, identificar hábitos financieros y mejorar la planificación doméstica. Una aplicación práctica de la analítica de datos al ámbito personal.
+        </p>
+        <p><strong>Tecnologías:</strong> Python, KNIME</p>
+        <a href="proyectos/gastosPersonales.html" class="btn btn-primary">Ver más detalles</a>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
-    <p>LinkedIn: <a href="www.linkedin.com/in/luis-bartolomé-navarro-tierno-00a7a8255">linkedin.com/in/LuisNavarro</a></p>
+  <section id="contacto" class="container my-5 py-4 bg-light rounded">
+    <h2 class="text-primary fw-bold border-bottom pb-2 mb-3">Contacto</h2>
+    <p><a href="mailto:brunky93@gmail.com" class="btn btn-outline-primary me-2">Email</a></p>
+    <p><a href="https://www.linkedin.com/in/luis-bartolomé-navarro-tierno-00a7a8255" class="btn btn-outline-primary">LinkedIn</a></p>
   </section>
 
-  <footer>
+  <footer class="container text-center my-5 pt-4 border-top text-muted">
     <p>&copy; 2025 Luis Bartolomé Navarro Tierno. Todos los derechos reservados.</p>
   </footer>
   
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
