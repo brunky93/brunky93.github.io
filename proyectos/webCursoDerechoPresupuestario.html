@@ -8,10 +8,13 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-dark + navbar-dark mb-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="../index.html">Portafolio</a>
-    <div class="collapse navbar-collapse">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="../#proyectos">Proyectos</a></li>
@@ -20,15 +23,15 @@
     </div>
   </div>
 </nav>
+<div style="height: 70px;"></div>
 
 <div class="container my-5">
   <div class="card shadow p-4">
     <div class="mb-4 text-center">
-      <h2 class="text-primary fw-bold mb-2">Desarrollo de una web para la promoción de un curso online</h2>
+      <h2 class="text-primary fw-bold mb-2">Desarrollo de página de promoción de un curso online</h2>
       <a href="https://github.com/brunky93/cursoderechopresupuestario_bootstrap" target="_blank" class="btn btn-outline-primary btn-sm">Ver repositorio en GitHub</a>
     </div>
     <img src="../img/logoCurso.jpg" alt="Curso Derecho Presupuestario" class="d-block mx-auto mb-4" style="max-width: 300px;">
-
 
     <section class="mb-4">
       <h5 class="border-bottom fw-semibold pb-2 mb-3">Propósito del proyecto</h5>
@@ -94,9 +97,13 @@ Uno de los principales retos fue diseñar una estructura clara y modular que fac
         <img src="../img/WebCurso.png" alt="Curso Derecho Presupuestario" class="img-fluid rounded mx-auto d-block mt-3" style="max-width: 700px; border: 1px solid #ccc;">
 </p>
     </section>
+    </div>
+    <a href="../index.html" class="btn btn-secondary mt-4">Volver al portafolio</a>
   </div>
-</div>
 
+<footer class="container text-center my-5 pt-4 border-top text-muted">
+  <p>&copy; 2025 Luis Bartolomé Navarro Tierno. Todos los derechos reservados.</p>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

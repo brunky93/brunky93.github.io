@@ -2,15 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gestión Económica del Hogar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark + navbar-dark mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="../index.html">Portafolio</a>
-          <div class="collapse navbar-collapse">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
               <li class="nav-item"><a class="nav-link" href="../#proyectos">Proyectos</a></li>
@@ -19,84 +22,150 @@
           </div>
         </div>
       </nav>
+      <div style="height: 70px;"></div>
           
-  <div class="container my-5 shadow-sm border p-4 rounded bg-white">
-    <h1 class="mb-4 text-center text-primary">Gestión Económica del Hogar</h1>
-    <p><strong>Objetivo principal:</strong> Automatizar y optimizar el control financiero doméstico para mejorar la toma de decisiones sobre gastos e ingresos personales.</p>
+  <div class="container my-5">
+    <div class="card shadow p-4">
+      <div class="mb-4 text-center">
+        <h2 class="text-primary fw-bold mb-2">Gestión Económica del Hogar</h2>
+      </div>
+      <img src="img/00_gastosPortada.png" alt="Gastos hogar" class="d-block mx-auto mb-4" style="max-width: 300px;">
+      <section class="mb-4">
+        <p><strong>Objetivo principal:</strong> Automatizar y optimizar el control financiero doméstico para mejorar la toma de decisiones sobre gastos e ingresos personales.</p>
+        <p>El proyecto emplea <strong>KNIME Desktop</strong> como motor de análisis y transformación de datos. Esta plataforma permite crear flujos visuales que automatizan la carga de datos bancarios, su limpieza, categorización y posterior visualización.</p>
+      </section>
     
-    <h3 class="mt-4">Herramienta utilizada</h3>
-    <p>El proyecto emplea <strong>KNIME Desktop</strong> como motor de análisis y transformación de datos. Esta plataforma permite crear flujos visuales que automatizan la carga de datos bancarios, su limpieza, categorización y posterior visualización.</p>
+      <section class="mb-4">
+        <h5 class="border-bottom fw-semibold pb-2 mb-3">Componentes reutilizables y lógica implementada</h5>
+        <p>El proyecto ha sido desarrollado utilizando fragmentos modulares de workflows y componentes reutilizables dentro de KNIME. Esto incluye:</p>
+        <ul>
+          <li>Un flujo ETL automatizado para importar, limpiar y transformar los datos bancarios.</li>
+          <li>Un sistema de clasificación automática de movimientos en: Ingresos, Gastos Fijos, Gastos Variables y Ahorro.</li>
+          <li>Un módulo para el cálculo de gastos recurrentes, tanto fijos como variables, mes a mes.</li>
+        </ul>
+      </section>
     
-    <h3 class="mt-4">Funcionamiento general</h3>
-    <h3 class="mt-5">Componentes reutilizables y lógica implementada</h3>
-    <p>El proyecto ha sido desarrollado utilizando fragmentos modulares de workflows y componentes reutilizables dentro de KNIME. Esto incluye:</p>
-    <ul>
-      <li>Un flujo ETL automatizado para importar, limpiar y transformar los datos bancarios.</li>
-      <li>Un sistema de clasificación automática de movimientos en: Ingresos, Gastos Fijos, Gastos Variables y Ahorro.</li>
-      <li>Un módulo para el cálculo de gastos recurrentes, tanto fijos como variables, mes a mes.</li>
-    </ul>
-    <p>El dashboard permite visualizar los datos desde dos enfoques:</p>
-    <ul>
-      <li><strong>Vista mensual:</strong> centrada en el mes actual, que se define como el periodo comprendido entre el ingreso de la nómina y el último movimiento antes del siguiente ingreso.</li>
-      <li><strong>Vista histórica:</strong> permite analizar tendencias, evolución del ahorro y comparativas intermensuales.</li>
-    </ul>
-    <p>Además, se han integrado objetivos financieros personalizados, alineados con la regla 50/30/20, que orientan a mantener un equilibrio saludable: 50% en gastos fijos, 30% en variables y 20% en ahorro. La evolución de estos objetivos puede ser monitorizada fácilmente a lo largo del tiempo.</p>
+      <section class="mb-4">
+        <h5 class="border-bottom fw-semibold pb-2 mb-3">Funcionamiento</h5>
+        <p>El proyecto permite analizar los datos desde dos enfoques:</p>
+        <ul>
+          <li><strong>Vista mensual:</strong> centrada en el mes actual, que se define como el periodo comprendido entre el ingreso de la nómina y el último movimiento antes del siguiente ingreso de nómina.</li>
+          <li><strong>Vista histórica:</strong> permite analizar tendencias, evolución del ahorro y comparativas intermensuales.</li>
+        </ul>
+        <p>Además, se han integrado objetivos financieros personalizados, alineados con la regla 50/30/20, que orientan a mantener un equilibrio saludable: 50% en gastos fijos, 30% en variables y 20% en ahorro. La evolución de estos objetivos puede ser monitorizada fácilmente a lo largo del tiempo.</p>
+      </section>
     
-    <h3 class="mt-4">Impacto personal y eficiencia</h3>
-    <p>Antes de automatizar este proceso, cada análisis mensual requería revisar manualmente todos los movimientos, categorizarlos uno a uno y consolidarlos en múltiples hojas de cálculo. Este proceso era lento, propenso a errores y difícil de replicar con coherencia mes a mes.</p>
-    <p>Gracias a esta solución, el tiempo invertido en el análisis financiero doméstico se ha reducido drásticamente, liberando varias horas cada mes. Además, ha mejorado significativamente la comprensión del comportamiento financiero propio y ha permitido tomar decisiones mejor fundamentadas, con una planificación mucho más realista y estructurada.</p>    
-    <h3 class="mt-4">Impacto práctico</h3>
-    <p>Este sistema proporciona una visión clara de la economía familiar. Permite anticipar gastos recurrentes, evitar solapamientos de pagos, descubrir hábitos de consumo y fomentar la planificación financiera responsable. Es una herramienta útil tanto para personas que desean tener mayor control de sus finanzas como para familias que necesitan una visión conjunta de sus cuentas.</p>
+      <section class="mb-4">
+        <h5 class="border-bottom fw-semibold pb-2 mb-3">Impacto personal y eficiencia</h5>
+        <p>Antes de automatizar este proceso, cada análisis mensual requería revisar manualmente todos los movimientos, categorizarlos uno a uno y consolidarlos en múltiples hojas de cálculo. Este proceso era lento, propenso a errores y difícil de replicar con coherencia mes a mes.</p>
+        <p>Gracias a esta solución, el tiempo invertido en el análisis financiero doméstico se ha reducido drásticamente, liberando varias horas cada mes. Además, ha mejorado significativamente la comprensión del comportamiento financiero propio y ha permitido tomar decisiones mejor fundamentadas, con una planificación mucho más realista y estructurada.</p>    
+      </section>
+      
+      <section class="mb-4">
+        <h5 class="border-bottom fw-semibold pb-2 mb-3">Tecnologías utilizadas</h5>
+        <ul>
+          <li>KNIME Analytics Platform</li>
+          <li>Python (Pandas, Plotly)</li>
+          <li>Excel / CSV</li>
+        </ul>
+      </section>
+      
+      <h3 class="mt-4 border-bottom">Imágenes</h3>
+      <p>A continuación se puede ver cómo se estructura el proyecto internamente y los resultados visuales obtenidos</p>
 
-    <h3 class="mt-4">Tecnologías utilizadas</h3>
-    <ul>
-      <li>KNIME Desktop</li>
-      <li>Excel / CSV</li>
-      <li>Git (gestión de versiones)</li>
-    </ul>
-
-    <h3 class="mt-4">Capturas y ejemplos</h3>
-    <p>A continuación se muestran algunas capturas representativas del proyecto. Estas ilustraciones permiten comprender mejor la estructura del flujo, la lógica de categorización y los resultados visuales obtenidos.</p>
-
-    <div class="row my-4">
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
-          <img src="../img/knime_etl.png" class="card-img-top" alt="Flujo ETL en KNIME">
-          <div class="card-body">
-            <p class="card-text text-center">Flujo de proceso ETL en KNIME</p>
+      <div class="row my-4">
+        <!-- 1. Flujo General -->
+        <div class="col-md-12 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/flujoGeneral.png" class="card-img-top" alt="Flujo general del sistema">
+            <div class="card-body">
+              <p class="card-text"><strong>Flujo general:</strong> Automatización completa del análisis financiero. Desde la importación del archivo de movimientos, copia de seguridad, lectura y procesamiento, hasta el cálculo del balance y su envío a paneles de visualización mensual e histórico.</p>
+            </div>
           </div>
         </div>
+
+        <!-- 2. Periodo Actual -->
+        <div class="col-md-12 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/periodoActual.png" class="card-img-top" alt="Panel periodo actual">
+            <div class="card-body">
+              <p class="card-text"><strong>Análisis mensual:</strong> Muestra los movimientos del periodo definido agrupados por categoría (fijos, variables y ahorro), análisis porcentual sobre ingresos y alertas inteligentes basadas en el comportamiento histórico.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Periodo Histórico -->
+        <div class="col-md-12 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/periodoHistorico.png" class="card-img-top" alt="Panel histórico">
+            <div class="card-body">
+              <p class="card-text"><strong>Análisis histórico:</strong> Incluye los módulos que permiten segmentar los gastos por tipo (fijos o variables), calcular la evolución histórica del saldo neto y realizar simulaciones del impacto financiero al introducir nuevos gastos. 
+              Además, implementa un análisis de variabilidad por subcategoría usando el <strong>coeficiente de variación (CV)</strong>, que mide la estabilidad mensual del gasto.</p>
+              <p class="card-text">
+                <strong>Leyenda del análisis de variabilidad:</strong><br>
+                ✅ <strong>Estable:</strong> CV bajo — comportamiento predecible mes a mes.<br>
+                ⚠️ <strong>Variable pero bajo impacto:</strong> CV moderado — ciertas oscilaciones, pero sin gran peso en el presupuesto.<br>
+                🔴 <strong>Desajuste potencial:</strong> CV alto — gasto impredecible y con impacto significativo, debe ser vigilado o ajustado.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
-          <img src="../img/clasificacion_movimientos.png" class="card-img-top" alt="Clasificación de movimientos financieros">
-          <div class="card-body">
-            <p class="card-text text-center">Clasificación automática: Ingresos, Gastos Fijos, Variables y Ahorro</p>
+
+      <h3 class="mt-4 border-bottom">Resultado</h3>
+      <p>Finalmente, los paneles de mando ofrecen una visualización clara y detallada del comportamiento financiero mensual e histórico, facilitando la toma de decisiones y el seguimiento de objetivos.</p>
+
+      <div class="row my-4">
+        <!-- 4. Panel Mensual 1 -->
+        <h4 class="text-center">Análisis mensual</h4>
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/panelMensual1.png" class="card-img-top" alt="Objetivos de gasto mensual">
+            <div class="card-body">
+              <p class="card-text"><strong>Panel mensual 1 - Distribución por objetivo:</strong> Indicadores tipo velocímetro que comparan los porcentajes reales con los objetivos 50/30/20. Permite ver de forma rápida si se está gastando más de lo saludable en alguna categoría.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Panel Mensual 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/panelMensual2.png" class="card-img-top" alt="Situación financiera mensual">
+            <div class="card-body">
+              <p class="card-text"><strong>Panel mensual 2 - Detalle financiero:</strong> Tabla con análisis de límites de gasto y emisión de insights automáticos. También se muestra saldo disponible y detalle de movimientos del periodo. Ideal para seguimiento mensual detallado.</p>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="text-center">Análisis histórico</h4>
+        <!-- 6. Panel Histórico 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/panelHist1.png" class="card-img-top" alt="Histórico de gastos">
+            <div class="card-body">
+              <p class="card-text"><strong>Panel histórico 1 - Gasto mensual:</strong> Visualización de la mediana de gasto mensual por subcategoría y su nivel de inestabilidad. Ayuda a detectar áreas con riesgo de desajuste financiero, clasificadas como estables o potencialmente problemáticas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Panel Histórico 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/panelHist2.png" class="card-img-top" alt="Evaluación de gasto por subcategoría">
+            <div class="card-body">
+              <p class="card-text"><strong>Panel histórico 2 - Evolucón saldo neto:</strong>Permite visualizar el comportamiento del saldo neto (Ingresos-Gastos) a lo largo del tiempo. También incluye simulaciones del impacto porcentual de un nuevo gasto fijo en el equilibrio presupuestario.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="row my-4">
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
-          <img src="../img/dashboard_mensual.png" class="card-img-top" alt="Dashboard mensual">
-          <div class="card-body">
-            <p class="card-text text-center">Dashboard mensual con resumen de categorías</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
-          <img src="../img/vista_historica.png" class="card-img-top" alt="Vista histórica del comportamiento financiero">
-          <div class="card-body">
-            <p class="card-text text-center">Vista histórica de evolución financiera</p>
-          </div>
-        </div>
-      </div>
+      <a href="../index.html" class="btn btn-secondary mt-4">Volver al portafolio</a>
     </div>
 
-    <a href="../index.html" class="btn btn-secondary mt-4">Volver al portafolio</a>
-  </div>
+  <footer class="container text-center my-5 pt-4 border-top text-muted">
+    <p>&copy; 2025 Luis Bartolomé Navarro Tierno. Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
