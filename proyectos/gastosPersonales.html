@@ -96,42 +96,25 @@
       <p>A continuación se puede ver cómo se estructura el proyecto internamente y algunos de los resultados visuales obtenidos.</p>
 
       <div class="row my-4">
-        <!-- 1. Flujo General -->
+        <!-- 0. Subida de nuevos movimientos -->
+        <div class="col-md-12 mb-4">
+          <div class="card shadow-sm" style="height: 100%;">
+            <img src="img/VentanaSubida.png" class="card-img-top" alt="Vista de subida de nuevos movimientos">
+            <div class="card-body">
+              <p class="card-text"><strong>Subida de nuevos movimientos:</strong> vista de control utilizada al incorporar un nuevo extracto bancario. Permite revisar los movimientos que se van a añadir, comparar el archivo con el histórico existente y previsualizar cómo quedará el nuevo histórico antes de consolidarlo.</p>
+            </div>
+          </div>
+        </div>
+        <!-- 1. Flujo general -->
         <div class="col-md-12 mb-4">
           <div class="card shadow-sm" style="height: 100%;">
             <img src="img/flujoGeneral.png" class="card-img-top" alt="Flujo general del sistema">
             <div class="card-body">
-              <p class="card-text"><strong>Flujo general:</strong> automatización completa del proceso financiero. Incluye importación del extracto bancario, limpieza, control de duplicados, clasificación, identificación de nóminas, asignación de periodos, actualización del histórico maestro y generación de paneles de análisis mensual e histórico.</p>
+              <p class="card-text"><strong>Flujo general:</strong> representación completa del pipeline financiero desarrollado en KNIME. El flujo se divide en cuatro bloques principales: subida del nuevo extracto bancario, ETL y clasificación automática, lectura del último histórico consolidado y consolidación final de los nuevos movimientos con el histórico existente.</p>
+              <p class="card-text">La arquitectura incorpora controles de duplicados, identificación automática de nóminas, asignación de periodos financieros y actualización incremental del histórico maestro antes de cargar los datos en Databricks para su explotación analítica.</p>
             </div>
           </div>
         </div>
-
-        <!-- 2. Periodo Actual -->
-        <div class="col-md-12 mb-4">
-          <div class="card shadow-sm" style="height: 100%;">
-            <img src="img/periodoActual.png" class="card-img-top" alt="Panel periodo actual">
-            <div class="card-body">
-              <p class="card-text"><strong>Análisis mensual:</strong> muestra los movimientos del periodo financiero actual, agrupados por categoría y subcategoría. Incluye análisis porcentual sobre ingresos, comparación con objetivos 50/30/20 y alertas basadas en el comportamiento histórico.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Periodo Histórico -->
-        <div class="col-md-12 mb-4">
-          <div class="card shadow-sm" style="height: 100%;">
-            <img src="img/periodoHistorico.png" class="card-img-top" alt="Panel histórico">
-            <div class="card-body">
-              <p class="card-text"><strong>Análisis histórico:</strong> incluye módulos para segmentar gastos por tipo, analizar la evolución del saldo neto, estudiar el peso de cada subcategoría y simular el impacto financiero de nuevos gastos. Además, incorpora un análisis de variabilidad mediante el <strong>coeficiente de variación (CV)</strong>, que ayuda a distinguir gastos estables de gastos impredecibles o con posible riesgo de desajuste.</p>
-              <p class="card-text">
-                <strong>Leyenda del análisis de variabilidad:</strong><br>
-                ✅ <strong>Estable:</strong> CV bajo — comportamiento predecible mes a mes.<br>
-                ⚠️ <strong>Variable pero bajo impacto:</strong> CV moderado — ciertas oscilaciones, pero sin gran peso en el presupuesto.<br>
-                🔴 <strong>Desajuste potencial:</strong> CV alto — gasto impredecible y con impacto significativo, debe ser vigilado o ajustado.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <h3 class="mt-4 border-bottom">Resultado</h3>
@@ -161,49 +144,6 @@
         </div>
       </div>
 
-      <div class="row my-4">
-        <!-- 4. Panel Mensual 1 -->
-        <h4 class="text-center">Análisis mensual</h4>
-        <div class="col-md-6 mb-4">
-          <div class="card shadow-sm" style="height: 100%;">
-            <img src="img/panelMensual1.png" class="card-img-top" alt="Objetivos de gasto mensual">
-            <div class="card-body">
-              <p class="card-text"><strong>Panel mensual 1 - Distribución por objetivo:</strong> indicadores tipo velocímetro que comparan los porcentajes reales del periodo con los objetivos 50/30/20. Permite identificar rápidamente si alguna categoría se aleja del equilibrio presupuestario previsto.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Panel Mensual 2 -->
-        <div class="col-md-6 mb-4">
-          <div class="card shadow-sm" style="height: 100%;">
-            <img src="img/panelMensual2.png" class="card-img-top" alt="Situación financiera mensual">
-            <div class="card-body">
-              <p class="card-text"><strong>Panel mensual 2 - Detalle financiero:</strong> tabla con análisis de límites de gasto, saldo disponible, movimientos del periodo e insights automáticos. Está orientado al seguimiento operativo del mes financiero en curso.</p>
-            </div>
-          </div>
-        </div>
-
-        <h4 class="text-center">Análisis histórico</h4>
-        <!-- 6. Panel Histórico 1 -->
-        <div class="col-md-6 mb-4">
-          <div class="card shadow-sm" style="height: 100%;">
-            <img src="img/panelHist1.png" class="card-img-top" alt="Histórico de gastos">
-            <div class="card-body">
-              <p class="card-text"><strong>Panel histórico 1 - Gasto mensual:</strong> visualización de la mediana histórica de gasto por subcategoría y de su nivel de variabilidad. Ayuda a detectar áreas estables, gastos de bajo impacto y posibles focos de desajuste financiero.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Panel Histórico 2 -->
-        <div class="col-md-6 mb-4">
-          <div class="card shadow-sm" style="height: 100%;">
-            <img src="img/panelHist2.png" class="card-img-top" alt="Evaluación de gasto por subcategoría">
-            <div class="card-body">
-              <p class="card-text"><strong>Panel histórico 2 - Evolución del saldo neto:</strong> permite visualizar el comportamiento del saldo neto a lo largo del tiempo. También incluye simulaciones del impacto porcentual de un nuevo gasto fijo en el equilibrio presupuestario.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
       <a href="../index.html" class="btn btn-secondary mt-4">Volver al portafolio</a>
     </div>
